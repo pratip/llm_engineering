@@ -47,8 +47,7 @@ def display_summary(website_summary: str|None) -> None:
     Returns:
       str: The formatted summary for display.
     """
-    summary = summarize(url)
-    display(Markdown(summary))
+    display(Markdown(website_summary))
 
 
 def summarize(url):
