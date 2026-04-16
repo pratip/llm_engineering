@@ -38,11 +38,13 @@ CSS = """
 .convert-btn button:hover { box-shadow: 0 0 0 2px var(--accent) inset; }
 
 /* Outputs with color tint */
-.py-out textarea {
+.py-out div {
   background: linear-gradient(180deg, rgba(32,157,215,.18), rgba(32,157,215,.10));
   border: 1px solid rgba(32,157,215,.35) !important;
   color: rgba(32,157,215,1) !important;
   font-weight: 600;
+  min-height: 15rem;
+  padding: 20px;
 }
 .cpp-out textarea {
   background: linear-gradient(180deg, rgba(236,173,10,.22), rgba(236,173,10,.12));
@@ -50,7 +52,14 @@ CSS = """
   color: rgba(236,173,10,1) !important;
   font-weight: 600;
 }
-
+.cpp-out div{
+  background: linear-gradient(180deg, rgba(236,173,10,.22), rgba(236,173,10,.12));
+  border: 1px solid rgba(236,173,10,.45) !important;
+  color: rgba(236,173,10,1) !important;
+  font-weight: 600;
+  min-height: 15rem;
+  padding: 20px;
+}
 /* Align controls neatly */
 .controls .wrap {
   gap: 10px;
