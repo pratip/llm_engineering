@@ -78,7 +78,9 @@ def parse(datapoint, category):
         title = datapoint["title"]
         description = datapoint["description"]
         features = datapoint["features"]
-        details = json.loads(datapoint["details"])
+        details = datapoint["details"]
+        if isinstance(details, str):
+            details = json.loads(details)
         weight = get_weight(details)
         full = scrub(title, description, features, details)
         if len(full) >= MIN_CHARS:
